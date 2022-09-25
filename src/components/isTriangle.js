@@ -6,7 +6,7 @@ const IsTriangle = () => {
   const [angle3, setAngle3] = useState("");
   const [output, setOutput] = useState("");
 
-  function check(angle1, angle2, angle3) {
+  function checkIsTriangle(angle1, angle2, angle3) {
     if (angle1 + angle2 + angle3 === 180) {
       setOutput("It is a triangle!");
     } else {
@@ -14,37 +14,28 @@ const IsTriangle = () => {
     }
   }
 
-  function getAngle1(event) {
+  function setAngleOne(event) {
     setAngle1(Number(event.target.value));
   }
-  function getAngle2(event) {
+  function setAngleTwo(event) {
     setAngle2(Number(event.target.value));
   }
-  function getAngle3(event) {
+  function setAngleThree(event) {
     setAngle3(Number(event.target.value));
   }
 
   return (
     <>
       <label htmlFor="angle-1">Enter the value for angle-1</label>
-      <input
-        type="number"
-        id="angle-1"
-        onChange={getAngle1}
-      ></input>
+      <input type="number" id="angle-1" onChange={setAngleOne}></input>
       <label htmlFor="angle-2">Enter the value for angle-2</label>
-      <input
-        type="number"
-        id="angle-2"
-        onChange={getAngle2}
-      ></input>
+      <input type="number" id="angle-2" onChange={setAngleTwo}></input>
       <label htmlFor="angle-3">Enter the value for angle-3</label>
-      <input
-        type="number"
-        id="angle-3"
-        onChange={getAngle3}
-      ></input>
-      <button id="check-btn" onClick={() => check(angle1, angle2, angle3)}>
+      <input type="number" id="angle-3" onChange={setAngleThree}></input>
+      <button
+        id="check-btn"
+        onClick={() => checkIsTriangle(angle1, angle2, angle3)}
+      >
         check
       </button>
       <div id="output">{output}</div>
