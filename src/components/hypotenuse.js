@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./style.css";
 
 function Hypotenuse() {
   const [side1, setSide1] = useState("");

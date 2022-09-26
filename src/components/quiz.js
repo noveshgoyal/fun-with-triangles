@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./style.css";
 
 const correctAnswers = ["90", "right", "one", "equi", "85"];
 

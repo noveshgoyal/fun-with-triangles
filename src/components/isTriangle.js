@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./style.css";
 
 const IsTriangle = () => {
   const [angle1, setAngle1] = useState("");
