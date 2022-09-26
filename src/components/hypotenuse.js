@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 
 function Hypotenuse() {
   const [side1, setSide1] = useState("");
@@ -16,20 +17,20 @@ function Hypotenuse() {
     // function for the calculation of hypotenuse
     const sumOfSquares = sideOne * sideOne + sideTwo * sideTwo;
     const hypotenuse = Math.sqrt(sumOfSquares);
-    setOutput(hypotenuse);
+    setOutput(`The length of the hypotenuse is ${hypotenuse}`);
   }
   return (
-    <>
+    <div className="container">
       <h1>Hypotenuse of a Triangle</h1>
-      <label htmlFor="side-1">Enter side one</label>
-      <input type="number" className="side" onChange={setSideOne} />
-      <label htmlFor="side-2">Enter side two</label>
-      <input type="number" className="side" onChange={setSideTwo} />
+      <label htmlFor="side-1" className="label">Enter side one</label>
+      <input type="number" className="input" onChange={setSideOne} />
+      <label htmlFor="side-2" className="label">Enter side two</label>
+      <input type="number" className="input" onChange={setSideTwo} />
       <button onClick={() => calculateHypotenuse(side1, side2)}>
-        Check Hypotenuse
+        Hypotenuse
       </button>
-      <div id="output">{output}</div>
-    </>
+      <p id="output">{output}</p>
+    </div>
   );
 }
 

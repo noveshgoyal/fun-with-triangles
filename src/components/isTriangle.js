@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 
 const IsTriangle = () => {
   const [angle1, setAngle1] = useState("");
@@ -8,9 +9,9 @@ const IsTriangle = () => {
 
   function checkIsTriangle(angle1, angle2, angle3) {
     if (angle1 + angle2 + angle3 === 180) {
-      setOutput("It is a triangle!");
+      setOutput("These angles forms a Triangle!");
     } else {
-      setOutput("No it is not!");
+      setOutput("These angles does not form a Triangle!");
     }
   }
 
@@ -25,21 +26,23 @@ const IsTriangle = () => {
   }
 
   return (
-    <>
-      <label htmlFor="angle-1">Enter the value for angle-1</label>
-      <input type="number" id="angle-1" onChange={setAngleOne}></input>
-      <label htmlFor="angle-2">Enter the value for angle-2</label>
-      <input type="number" id="angle-2" onChange={setAngleTwo}></input>
-      <label htmlFor="angle-3">Enter the value for angle-3</label>
-      <input type="number" id="angle-3" onChange={setAngleThree}></input>
-      <button
+    <div className="container">
+      <h1>Angles of Triangle</h1>
+      
+      <label htmlFor="angle-1" className="label">Angle 1</label>
+      <input type="number" id="angle-1" className="input" onChange={setAngleOne}></input>
+      <label htmlFor="angle-2" className="label">Angle 2</label>
+      <input type="number" id="angle-2" className="input" onChange={setAngleTwo}></input>
+      <label htmlFor="angle-3" className="label">Angle 3</label>
+      <input type="number" id="angle-3" className="input" onChange={setAngleThree}></input>
+      <button style={{marginTop:"15px"}}
         id="check-btn"
         onClick={() => checkIsTriangle(angle1, angle2, angle3)}
       >
-        check
+        Is Triangle?
       </button>
-      <div id="output">{output}</div>
-    </>
+      <div id="output" >{output}</div>
+    </div>
   );
 };
 
