@@ -7,7 +7,10 @@ const IsTriangle = () => {
   const [output, setOutput] = useState("");
 
   function checkIsTriangle(angle1, angle2, angle3) {
-    if (angle1 + angle2 + angle3 === 180) {
+    if(angle1 ==="" || angle2==="" || angle3 === ""){
+      setOutput("Enter valid inputs")
+    }
+    else if (angle1 + angle2 + angle3 === 180) {
       setOutput("These angles forms a Triangle!");
     } else {
       setOutput("These angles does not form a Triangle!");
