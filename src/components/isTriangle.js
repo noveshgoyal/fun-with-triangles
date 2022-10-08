@@ -43,7 +43,7 @@ const IsTriangle = () => {
       >
         Is Triangle?
       </button>
-      <div id="output" >{output}</div>
+      <div className="output" >{output}</div>
     </div>
   );
 };

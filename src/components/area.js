@@ -25,7 +25,7 @@ function Area(){
         <label htmlFor="height" className="label">Height</label>
         <input id="height" type="number" className="input" onChange={setHeight}/>
         <button onClick={() => calculateArea(base, height)}>Calculate</button>
-        <p id="output">{output}</p>
+        <p className="output">{output}</p>
         </div>
     );
 }

@@ -28,7 +28,7 @@ function Hypotenuse() {
       <button onClick={() => calculateHypotenuse(side1, side2)}>
         Hypotenuse
       </button>
-      <p id="output">{output}</p>
+      <p className="output">{output}</p>
     </div>
   );
 }

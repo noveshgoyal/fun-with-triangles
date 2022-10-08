@@ -79,7 +79,7 @@ button{
   color: white;
 }
 
-#output{
+.output{
   font-size: x-large;
   margin-top: 20px;
   font-weight: bold;
