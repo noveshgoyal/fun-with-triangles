@@ -22,9 +22,9 @@ function Hypotenuse() {
     <div className="container">
       <h1>Hypotenuse of a Triangle</h1>
       <label htmlFor="side-1" className="label">Enter side one</label>
-      <input type="number" className="input" onChange={setSideOne} />
+      <input type="number" className="input" min={0} onChange={setSideOne} />
       <label htmlFor="side-2" className="label">Enter side two</label>
-      <input type="number" className="input" onChange={setSideTwo} />
+      <input type="number" className="input" min={0} onChange={setSideTwo} />
       <button onClick={() => calculateHypotenuse(side1, side2)}>
         Hypotenuse
       </button>

@@ -8,7 +8,7 @@ const IsTriangle = () => {
 
   function checkIsTriangle(angle1, angle2, angle3) {
     if(angle1 ==="" || angle2==="" || angle3 === ""){
-      setOutput("Enter valid inputs")
+      setOutput("Enter valid inputs!")
     }
     else if (angle1 + angle2 + angle3 === 180) {
       setOutput("These angles forms a Triangle!");
@@ -32,11 +32,11 @@ const IsTriangle = () => {
       <h1>Angles of Triangle</h1>
       
       <label htmlFor="angle-1" className="label">Angle 1</label>
-      <input type="number" id="angle-1" className="input" onChange={setAngleOne}></input>
+      <input type="number" id="angle-1" className="input" min={0} onChange={setAngleOne}></input>
       <label htmlFor="angle-2" className="label">Angle 2</label>
-      <input type="number" id="angle-2" className="input" onChange={setAngleTwo}></input>
+      <input type="number" id="angle-2" className="input" min={0} onChange={setAngleTwo}></input>
       <label htmlFor="angle-3" className="label">Angle 3</label>
-      <input type="number" id="angle-3" className="input" onChange={setAngleThree}></input>
+      <input type="number" id="angle-3" className="input" min={0} onChange={setAngleThree}></input>
       <button style={{marginTop:"15px"}}
         id="check-btn"
         onClick={() => checkIsTriangle(angle1, angle2, angle3)}

@@ -21,9 +21,9 @@ function Area(){
         <div className="container">
         <h1>Area of Triangle</h1>
         <label htmlFor="base" className="label">Base</label>
-        <input id="base" type="number" className="input" onChange={setBase}/>
+        <input id="base" type="number" className="input" min={0} onChange={setBase}/>
         <label htmlFor="height" className="label">Height</label>
-        <input id="height" type="number" className="input" onChange={setHeight}/>
+        <input id="height" type="number" className="input" min={0} onChange={setHeight}/>
         <button onClick={() => calculateArea(base, height)}>Calculate</button>
         <p className="output">{output}</p>
         </div>
