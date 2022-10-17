@@ -5,12 +5,11 @@ const correctAnswers = ["90", "right", "one", "equi", "85"];
 function getScores(){
     const formdata = new FormData(document.getElementById("form"));
     let score = 0; 
-    let index = 0; 
     for( let value of formdata.values()){
+      let index = correctAnswers.indexOf(value); 
       if(value === correctAnswers[index]){
         score = score + 1;
       }
-      index = index + 1;
     }
     return score;
 }
